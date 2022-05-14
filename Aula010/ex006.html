@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area {
+            font: normal 18pt arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'area'> //
+        Interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area') //não é m bom pq tem um problema de memoria 
+        a.addEventListener('click', clicar)         //ter esses três aqui
+        a.addEventListener('mouseenter', entrar)    //faz não precisar 
+        a.addEventListener('mouseout', saiu)        //daqueles do lado do div -> onclick = 'clicar()' onmouseenter = 'entrar()' onmouseleave="saiu()
+        function clicar(){
+            a.innerText = 'clicou!'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            a.innerText = 'entrou...'
+            a.style.background = 'blue'
+        }
+        function saiu(){
+            a.innerText = 'saiu.'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

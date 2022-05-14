@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        Body{
+            font: normal 18pt Arial
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras! <br/>`)
+        document.write(`O seu nome em maiúsculas é ${nome.toUpperCase()}! <br/>`)
+        document.write(`O seu nome em minúsculas é ${nome.toLocaleLowerCase()}! <br/>`)
+        var num = nome.length * 11.2
+        document.write(`Seu número é ${num.toFixed(2)}!`) // garante dois digitos depois da virgula/ponto
+        /* para usar virgula no lugar de ponto use:
+         num.toFixed(2).replace('.', ',')
+         para usar Real do Brasil:
+         num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+         > num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+         'R$ 5,50'
+         > num.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})
+         'US$ 5,50'
+         > num.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})
+         '€ 5,50'
+         */
+    </script>
+    
+</body>
+</html>
